@@ -94,7 +94,7 @@ I will use this IP Address to find the root falg in this machine.
 ![alt text](../crocodile/ip.png)
 
 As usual, I have started scanning the target IP address by using nmap tool to find open ports and services.
-![nmap](/assets/img/crocodile/nmap.png)
+![alt text](../crocodile/nmap.png)
 
 #### Result 
 * Port 21 is open which is FTP (File Transfer Protocol)
