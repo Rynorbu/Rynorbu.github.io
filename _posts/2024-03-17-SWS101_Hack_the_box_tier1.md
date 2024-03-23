@@ -104,7 +104,10 @@ As you can see there are two file allowed.userlist and allowed.userlist.passwd i
 ![alt text](../crocodile/fttp.png)
 
 Inside this files there are list of user and their password.
-![alt text](../crocodile/user.png)  ![alt text](../crocodile/pass.png)
+
+![alt text](../crocodile/user.png) 
+
+![alt text](../crocodile/pass.png)
 As I have found the user and their password I need to discover hidden URLs, files, and directories within websites to find the root flag. So, Inorder to find this I used Fuzz Faster U Fool(ffuf) to find hidden URLs.
 ![alt text](../crocodile/ffuf.png)
 
