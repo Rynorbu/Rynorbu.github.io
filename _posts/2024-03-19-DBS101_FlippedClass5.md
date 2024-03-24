@@ -17,6 +17,7 @@ In the table shown above, the "student_id" column serves as the primary key. Thi
 
 #### Types of DBMS Normal forms
 There are many types of Normal forms in DBMS, They are;
+
 ![alt text](../normal.png)
 
 1. **First Normal Form (1NF)**
@@ -28,6 +29,7 @@ We can say that a table is in the First Normal Form, If the tables:
 * The datas can be in any order.
 
 For Example;
+
 ![alt text](../qu.png)
 
 The course column has multiple values in the first tuple, so the table fails to pass the First Normal form.
@@ -54,9 +56,11 @@ This table violates 2NF because the author address is dependent on the author, n
 To achieve 2NF, we need remove partial dependencies.
 
 * Books Table:
+
 ![alt text](../book.png)
 
 * Author table:
+
 ![alt text](../author.png)
 
 Now the Books table contains information about books and refers to authors using the Author ID and the Authors table contains information about authors and their addresses. Each author has a unique ID.
@@ -69,6 +73,7 @@ The address is not stored with each book but is instead linked to the author. Th
 In 3NF, we need to ensure that there are no transitive dependencies. This means that non-key attributes should not depend on other non-key attributes.
 
 #### For example;
+
 ![alt text](../normal_form/3nf.png)
 
 This table violates the 3rd Normal Form because there is a transitive dependency where the Student_Course table the Instructor depends on Course ID, not on the entire key.
@@ -85,6 +90,7 @@ Creating these tables ensures that there are no transitive dependencies, satisfy
 BCNF ensures each information in a database table is uniquely identified by its primary key and eliminates certain types of data redundancies, without any unnecessary dependencies between different attributes.
 
 #### For Example;
+
 ![alt text](../normal_form/bcnf.png)
 In the above diagram, the Employee ID does not uniquely determine Supervisor ID, this violates BCNF because Supervisor ID is functionally dependent on a non-superkey (Employee ID).
 
@@ -105,12 +111,12 @@ In 4th Normal Form (4NF) it ensures that there are no repeating groups of data a
 In this a passenger can go to multiple place, and each passenger can have multiple hobbies. The column destination and hobby are independent of each other voilating  the Fourth Normal Form (4NF) because it contains multi-valued dependencies.
 
 I have created 2 tables to satisfy 4NF;
+
 ![alt text](../normal_form/des.png)
 
 ![alt text](../normal_form/hob.png)
+
 By creating this we have eliminated the violation of 4NF. Now, each table represents a single-valued fact about the entity.
-
-
 
 ### What we did in Flipped class
 
