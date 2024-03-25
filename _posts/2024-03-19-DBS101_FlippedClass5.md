@@ -116,7 +116,7 @@ I have created 2 tables to satisfy 4NF;
 
 ![alt text](../normal_form/hob.png)
 
-By creating this we have eliminated the violation of 4NF. Now, each table represents a single-valued fact about the entity.
+By creating this we have eliminated the violation of 4NF. Now, each table represents a single-valued data.
 
 ## What we did in Flipped Class
 
