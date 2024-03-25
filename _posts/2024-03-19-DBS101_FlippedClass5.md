@@ -118,6 +118,6 @@ I have created 2 tables to satisfy 4NF;
 
 By creating this we have eliminated the violation of 4NF. Now, each table represents a single-valued fact about the entity.
 
-## What we did in Flipped class
+## What we did in Flipped Class
 
 First, our class was divided into four groups, with each group assigned a topic to discuss among its members and present to the class. It was an intresting session where we actively participated and learned different types of normal forms.
