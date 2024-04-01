@@ -14,22 +14,46 @@ A database schema is considered the “blueprint” of a database which describe
 
 ![alt text](../database.jpg)
 
-### Data Structures
+## Exerise tasks
+In the exercise task I have learned the important procedures to be followed when building a relational database from scractch and their importance.
+
+Important procedures when building a relational database from scratch:
+
+* Design Phase: Plan out the database structure, including tables, relationships, and constraints.
+
+* Normalization: Organize data into logical tables to minimize redundancy and dependency.
+
+* Schema Creation: Define the database schema using SQL statements to create tables, indexes, and constraints.
+
+* Data Population: Insert initial data into the database tables.
+
+* Query Optimization: Tune queries for optimal performance by creating indexes and optimizing SQL queries.
+
+* Backup and Recovery: Establish procedures for regular backups to prevent data loss and ensure quick recovery in case of failure.
+
+* Security Implementation: Set up access controls and permissions to protect sensitive data and ensure data privacy.
+
+### Data Structures commonly used
 
 
 | Data structure | Key characteristics | 
 | ----------- | ----------- | 
-| Tables | These are the primary containers for data in a relational database. Each table represents a specific entity and contains rows and columns. Rows represent individual records, and columns represent attributes of those records. | 
+| Tables | Store data in rows and columns. Rows represent individual records, and columns represent attributes of those records. | 
 | Indexes | Indexes are data structures that improve the speed of data retrieval operations on a database table. |
-| Keys | DKeys are used to uniquely identify rows within a table and to establish relationships between tables. There are two main types of keys: primary keys and foreign keys. |
+| Keys | Keys are used to uniquely identify rows within a table and to establish relationships between tables. Two main types of keys: primary keys and foreign keys. |
 | Primary Key | Uniquely identify each record in a table. |
 | Foreign key | Link records in two tables |  
 | Views | A view is a virtual table based on a query’s result. Views provide a way to present a subset of data from a database in a specific format. |
+
 
 ### RAID Configuration
 RAID (Redundant Array of Independent Disks) is all about balancing speed, safety, and cost when storing data. It combines methods like striping (dividing data across multiple disks), mirroring (creating duplicates of data), and parity (extra data for error correction) to boost availability, protect against failures, and improve performance.
 
 ![alt text](../raid.png)
+
+
+### Buffer Pool Management
+A memory buffer pool stores frequently accessed data to reduce disk reads for better performance. Choosing the right size and using replacement policies efficiently are crucial for good performance and data integrity, especially in multi-user environments.
 
 ### Transaction Management:
 Transactions must adhere to ACID properties to prevent data inconsistencies. A transaction log is vital for recovery and rollback, maintaining integrity
@@ -39,3 +63,6 @@ Recovery and backup systems, such as checkpointing and write-ahead logging, make
 
 ### Query Processing
 To make things run smoothly, we need a tool that can understand and make the best use of all the SQL queries. It figures out the best way to find and change data, like scanning tables and indexes. This tool connects different parts of our system, like storage and memory, to handle data consistently and efficiently.
+
+
+
