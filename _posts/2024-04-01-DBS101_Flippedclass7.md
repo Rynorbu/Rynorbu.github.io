@@ -14,7 +14,7 @@ A database schema is considered the “blueprint” of a database which describe
 
 ![alt text](../database.jpg)
 
-## Exerise tasks
+## Exerise Tasks
 In the exercise task I have learned the important procedures to be followed when building a relational database from scractch and their importance.
 
 Important procedures when building a relational database from scratch:
@@ -33,7 +33,7 @@ Important procedures when building a relational database from scratch:
 
 * Security Implementation: Set up access controls and permissions to protect sensitive data and ensure data privacy.
 
-### Data Structures commonly used
+### Data Structures Commonly Used
 
 
 | Data structure | Key characteristics | 
