@@ -33,6 +33,8 @@ Important procedures when building a relational database from scratch:
 
 * Security Implementation: Set up access controls and permissions to protect sensitive data and ensure data privacy.
 
+![alt text](../impooo.png)
+
 ### Data Structures commonly used
 
 
@@ -58,11 +60,12 @@ A memory buffer pool stores frequently accessed data to reduce disk reads for be
 ### Transaction Management:
 Transactions must adhere to ACID properties to prevent data inconsistencies. A transaction log is vital for recovery and rollback, maintaining integrity
 
-### Recovery and Backup
-Recovery and backup systems, such as checkpointing and write-ahead logging, makes sure data stays safe and can be recovered if something goes wrong. Doing regular backups is really important to keep your data protected and to bounce back from any disasters.
-
 ### Query Processing
 To make things run smoothly, we need a tool that can understand and make the best use of all the SQL queries. It figures out the best way to find and change data, like scanning tables and indexes. This tool connects different parts of our system, like storage and memory, to handle data consistently and efficiently.
 
+![alt text](../ques.webp)
 
+### Recovery and Backup
+Recovery and backup systems, such as checkpointing and write-ahead logging, makes sure data stays safe and can be recovered if something goes wrong. Doing regular backups is really important to keep your data protected and to bounce back from any disasters.
 
+![alt text](../manaa.png)
