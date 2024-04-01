@@ -33,8 +33,6 @@ Important procedures when building a relational database from scratch:
 
 * Security Implementation: Set up access controls and permissions to protect sensitive data and ensure data privacy.
 
-![alt text](../impooo.png)
-
 ### Data Structures commonly used
 
 
