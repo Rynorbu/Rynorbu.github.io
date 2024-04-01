@@ -3,7 +3,7 @@ Title: DBS101 Flipped Class5
 categories: [DBS101, Flipped_class5]
 tags: [DBS101]
 ---
-## Topic: 
+## Topic: Tasks on Storage and buffer management 
 ---
 
 Today in flipped class I have learned about creating virtual representations of disk storage units, setting up RAID setups for redundancy and performance, and managing temporary data storage in memory buffers efficiently.
