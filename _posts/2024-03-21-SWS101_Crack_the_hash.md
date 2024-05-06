@@ -8,7 +8,7 @@ tags: [SWS101]
 
 ![alt text](../CrackTheHash/crackhas.jpeg)
 
-Hello everyone, I hope you all are doing good!! In this page we will be learning about the Crack The Hash challenges from Try Hack Me.
+Hello everyone, I hope you all are doing good! In this page we will be learning about the Crack The Hash challenges from Try Hack Me.
 
 In this room we will learn about:
 
