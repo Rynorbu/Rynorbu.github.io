@@ -46,6 +46,8 @@ I have used Crack station to crack the hash and do the tasks.
 
 ![alt text](../CrackTheHash/hashcrack.png)
 
+The task 1, 2, 3 and 5 are cracked by the crack station. The task 4 is not able to crack. Let's see the hash type of the task 4.
+
 To identify the hash, I googled the first 4 character
 
 ![alt text](../CrackTheHash/bycrpt.png)
@@ -87,6 +89,8 @@ As, I have done this task earlier I used `--show` in the end of the code to disp
 I have tried using crack station to hash these cracks but task 3 and task 4 are not able to crack.
 
 ![alt text](../CrackTheHash/tak2.png)
+
+Only task 1 and task 2 are able tp crack by using crack station. Let's crack task 3 and task 4 using hashcat.
 
 Let's see the hash type of the task 3.
 
