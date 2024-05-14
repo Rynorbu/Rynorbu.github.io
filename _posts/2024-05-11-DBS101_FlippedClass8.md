@@ -21,6 +21,8 @@ Indexing is a data structure that improves the speed of data retrieval operation
 
 ## Types of Indexing:
 
+![alt text](../flip8/types.png)
+
 ### Buffer Tree
 
 A Buffer Tree, also called a B-Tree, is a data structure used to efficiently store and manage large amounts of data, such as audio or video files.
