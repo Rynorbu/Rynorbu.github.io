@@ -75,7 +75,7 @@ The query first finds the ID of the 'Sales' department and then finds all employ
 
 ### In-Memory Storage
 
-In-memory storage, also known as in-memory computing, is a technology that stores data directly in a computer's main memory (RAM) for faster processing and retrieval.  This is much faster than traditional disk-based storage because RAM can access data significantly quicker than a hard drive.
+In-memory storage, also known as in-memory computing, is a technology that stores data directly in a computer's main memory (RAM) for faster processing and retrieval. This is much faster than traditional disk-based storage because RAM can access data significantly quicker than a hard drive.
 
 It is particularly useful for applications that require real-time data processing, such as financial trading systems, online gaming, and social media platforms.  By storing data in memory, these applications can quickly access and update information, leading to improved performance and responsiveness.
 
