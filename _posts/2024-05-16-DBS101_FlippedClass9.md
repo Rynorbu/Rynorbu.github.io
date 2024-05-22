@@ -18,7 +18,7 @@ It was a great expericence for us and hope our tutor will continue to give us su
 
 A materialized view is a database object that contains the results of a query. Unlike a regular view, which is a virtual table computed on-demand when queried, a materialized view stores the query result physically, allowing for faster access to the data. 
 
-### Key Features:
+### Key Features of Materialized Views:
 
 * Precomputation: The results of the query are precomputed and stored.
 * Fast Access: Querying the materialized view is faster because it retrieves precomputed data.
