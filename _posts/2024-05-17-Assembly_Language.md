@@ -239,4 +239,4 @@ To run the program, we have to open it with FASMW.EXE, paste the code, save the 
 
 * Single-step to see how the stack pointer and registers change.
 
-* Observe the call to ExitProcess and ensure proper termination.
+* Observe the call to ExitProcess and ensure proper termination
