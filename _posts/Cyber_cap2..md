@@ -1,0 +1,342 @@
+# Executive Summary 
+
+## Github Repo Link for evidences
+
+https://github.com/Rynorbu/SWS101/tree/main/SWS/caps/cap2
+
+# Website Penetration Test Assessment Summary
+
+## URL 1: 10.3.21.141:8000 (Gruyere)
+
+### Vulnerability 1 Title
+
+Path Transversal
+
+### How It works
+
+Path Transversal happens when the attacker is able to access files and directories that are outside the web root directory. It allows an attacker to read arbitrary files on the server that is running an application.
+
+In this site, I was able to access the `secret.txt` file using `..%2fsecret/txt` which contains the information about the users on the system.
+
+It works by using the input that is used to access files and directories on the server. By using the dot dot %2f (..%2f) sequence, an attacker can go back to the root directory and access files that are outside the web root directory.
+
+## Consequences
+
+The exploitation of this vulnerability could lead to:
+* Attacker can steal sensitive information such as cookies, session tokens, or other credentials.
+* Attacker can access the source code of the application and find other vulnerabilities.
+
+## Steps to Reproduce
+
+## Procedure
+
+This is what I did:
+
+![alt text](../Images/path_traversal.png)
+
+I tired to access the `secret.txt` file using the path `..%2fsecret/txt` and I was able to access the file which contains the information about the system.
+
+It allows an attacker to read arbitrary files on the server that is running an application.
+
+## Recommendations
+
+To not have this type of vulnerability we need to:
+
+* We need to use input validation so that it can  prevent users from entering the protected scripts.
+* We need to use a security policy to prevent the execution of scripts in user input.
+* We can store sensitive information in a separate directory that is not accessible from the web root directory.
+
+
+### Vulnerability 2 Title
+
+File upload vulnerabilities
+
+### How It works
+
+In this website, I was able to upload any kind of file without any restrictions. This can lead to file upload vulnerabilities where attackers can upload malicious files that can harm the system. 
+
+I added a php file that contains a script that will execute when the file is accessed. This vulnerability can be used to upload a web shell that can be used to gain remote access to the server.
+
+## Consequences
+
+The exploitation of this vulnerability could lead to:
+
+* Attacker can upload a web shell that can be used to gain access to the server.
+* The attacker can be able to upload malicious files that can harm the system or other users.
+* This can lead attackers to perform actions on behalf of the user, such as changing account settings.
+
+## Steps to Reproduce
+
+## Procedure
+
+This is what I did:
+
+In my accpunt I tried to upload a php file and I was able to upload it successfully.
+
+![alt text](../Images/cheese_upload.png)
+
+Then I accessed the file using the path `..%2fuploads%2fcheese.php` and the script in the file was executed.
+
+![alt text](../Images/cheese_success.png)
+
+I was able to upload a php file which is a major vulnerability because it allows attackers to upload malicious files that can harm the system.
+
+The attackers will use this vulnerability to upload a web shell that can be used to gain remote access to the server.
+
+### Vulnerability 3 Title 
+
+Cross-Site Request Forgery (XSRF/CSRF)
+
+### How It works
+
+I have discovered a vulnerability known as Cross-Site Request Forgery (CSRF) on this website. This vulnerability occurs when an attacker is able to trick a user into making a request on behalf of the attacker.
+
+Inside the website, I was able to create a snippet. But I was not able to delete the snippet that I have created  when I click the cross button. 
+
+So, I used this vulnerability to delete the snippet that I have created. I used this link to delete the snippet that I have created.
+
+    http://10.3.21.141:8008/471541268652354669237873339020654786900//deletesnippet?index=0
+
+
+## Consequences
+
+The exploitation of this vulnerability could lead to:
+
+* Attacker can perform actions on behalf of the user, such as changing account settings or making unauthorized transactions.
+* Attacker can delete the snippets that the user has created.
+* Attacker can steal sensitive information such as cookies, session tokens, or other credentials.
+* Attacker can deface the website or display inappropriate content to users.
+
+## Steps to Reproduce
+
+## Procedure
+
+This is what I did:
+
+I have created a snippet in my account norbu.
+
+![alt text](../Images/norbu.png)
+
+Then from my profile I tried to delete the snippet that I have created and it was successful.
+
+![alt text](../Images/norbu_delete.png)
+
+Here the snippet that I have created is deleted.
+
+![alt text](../Images/norbu_gone.png)
+
+
+## 10.3.21.141:8008
+
+### Vulnerability Title
+
+Insecure Direct Object Reference(IDOR)
+
+### How It Works
+
+I have discovered a vulnerability known as Insecure Direct Object References (IDOR). This vulnerability mainly occurs when the application exposes objects such as directories or files.
+
+In this site the application provides direct access to objects based on user input. 
+
+My profile ID is 65 but I was able to view the information that the profile 64 has. I just changed the profile ID to 64 in the my http header and I got all the sensitive information that the profile 64 has.
+
+## Consequences
+
+The exploitation of this vulnerability could lead to:
+
+* It allows users to access another user's information just by altering the profile ID in the HTTP request.
+* There is high chances that user will use this information and try to login and will lead to unauthorized access to sensitive data.
+* The attackers can be able to modify the data of other users which can lead to potential misuse. 
+
+## Steps to Reproduce
+
+## Procedure
+
+This is what I did:
+
+![alt text](../Images/IDOR.png)
+
+* Initially my profile ID is 65 and I used my own password to update my profile.
+* Then, I changed the profile ID in the HTTP request to 64 and surprisingly, I was able to see the email and password of the user with profile ID 64.
+
+In the profile 64, the email is `Khem@mail.com` and password  is`Khem`.
+
+This is a major vulnerability because it allows anyone to access another user's information just by changing the profile ID in the HTTP request.
+
+## Recommendations
+
+To not have this type of vulnerability we need to:
+
+* Make sure that the server checks if the user has the right to access or modify the requested data.
+* It is best to use reference like tokens instead of exposing internal IDs.
+
+By implementing this recommendation, It can prevent unauthorized access and protect user data from being exposed or modified by other users.
+
+##  Vulnerability Title
+
+File upload vulnerabilities
+
+## How It Works
+
+Actually in this website It does not allow other file to upload other than photos but I was able to upload other files like pdf, videos and many other. 
+
+The website doesnot check properly wheather the uploaded file is a photo or pdf or others. It just allows us to upload any files. This can lead to file upload vulnerabilities where atackers can upload malicious files that can harm the system.
+
+In this site, I was able to upload a pdf and a gif file which is not a photo. This site doesnot check any file type or extensions and allows us to upload any files.
+
+## Consequences
+
+This vulnerability could lead to:
+
+* Attacker can steal sensitive information such as cookies, session tokens, or other credentials.
+* The attacker can perform actions on behalf of the user, such as changing account settings or making unauthorized actions.
+
+## Steps to Reproduce
+
+### Procedure
+
+This is what I did:
+
+I got a hint that the website only allows to upload photos. But I tried to upload a pdf file and a gif file and I was able to upload them successfully.
+
+![alt text](../Images/upload_any_file_that_is_not_phot.png)
+
+First I tried to upload a gif file and I was able to upload it successfully.
+
+![alt text](../Images/gif.png)
+
+Then I tried to upload a pdf file.
+
+![alt text](../Images/pdf_upload.png)
+
+I was able to upload the pdf file successfully.
+
+![alt text](../Images/success_upload_pdf.png)
+
+I was able to upload a file other than a photo which is a major vulnerability because it allows attackers to upload malicious files that can harm the system.
+
+##  Vulnerability Title
+
+XSS on search field
+
+## How It Works
+
+I have discovered a vulnerability known as Cross-Site Scripting (XSS) on the search field on this website. This vulnerability occurs when an attacker is able to inject malicious scripts into web pages viewed by other users.
+
+In this site, I was able to inject a script into the search field and when another user searches for something, the script gets executed on their browser.
+
+I ran these scripts on the search field:
+
+    <script>alert('xss')</script>
+
+
+## Consequences
+
+The exploitation of this vulnerability could lead to:
+
+* Attacker can deface the website or display inappropriate content to users.
+* Attacker can perform actions on behalf of the user, such as changing account settings or making unauthorized transactions.
+
+
+## Steps to Reproduce
+
+### Procedure
+
+This is what I did:
+
+I found out that I can inject a script as a query in the search field because this vulnerabilty is already given in the about me page in the website. 
+
+![alt text](../Images/reflected_XSS.png)
+
+So, I just injected the script into the search field and when another user searches for something, the script gets executed on their browser.
+
+![alt text](../Images/reflected_xss_finished.png)
+
+## Recommendations
+
+To mitigate the risk associated with this vulnerability, we should:
+
+* making user input to remove any malicious scripts.
+* Use a content security policy to prevent the execution of scripts in user input.
+* using input validation to prevent users from entering malicious scripts into web forms.
+
+
+## www.hackthissite.org
+
+This site is like the try hack me site where we have to slove the questions and each level has a vulnerabilities that we can get into.
+
+I have done some task basic challenges.
+
+### Level 1
+
+Our task is to find the password. It's clearly mentioned that we should have the knowledge about HTML. 
+
+![alt text](../Images/level_1.png)
+
+This is the hind that I got;
+
+![alt text](../Images/Level!_note.png)
+
+After understanding the hind, I checked the HTML code and I found the password.
+
+![alt text](../Images/Level_1ANS.png)
+
+### Level 2
+
+I found this level intresting, it nearly took me 30 minutes to figure out the password. 
+
+![alt text](../Images/Level2.png)
+
+After reading the question many times I found that `He made it load the real password from an unencrypted text file and compare it to the password the user enters. However, he neglected to upload the password file` 
+
+So, from this I found that he neglated to upload the password file so I got it by just submitting the password blank.
+
+![alt text](../Images/level2_ans.png)
+
+### Level 3
+
+In this level we need to find the password file that are in the hidden directory. 
+
+![alt text](../Images/Level3.png)
+
+I checked the source code to see the hidden directory and found the input field that has the hidden directory. I knew that was the hidden directory beacuse the `type=hidden` and `name=file`.
+
+![alt text](../Images/Level3_ans.png)
+
+As the hidden directory is `password.php`. I navigated in this directory and foun out the password.
+
+![alt text](../Images/Level3_ans2.png)
+
+### Level 4
+x
+This time the password is long so he wrote a script that would email his password to him automatically in case he forgot. 
+
+![alt text](../Images/level4.png)
+
+So, I checked the source code and found the script that stores his email. Then I replaced my email with his email.
+
+![alt text](../Images/level4_code.png)
+
+After click the button `Send password to Sam` I recieved the password in my mail.
+
+![alt text](../Images/Level4_pass.png)
+
+### Level 5
+
+This level is same like the previous level. But this time he got a little smarter and made his email program a littile more secure.
+
+![alt text](../Images/Level_5.png)
+
+Same like the previous task I checked the source code and found the script that has his email. And then I replaced my email in his.
+
+![alt text](../Images/level5_source.png)
+
+![alt text](../Images/Level5_sources.png)
+
+Then after clicking the button `Send password to Sam` I found this message.
+
+![alt text](../Images/page.png)
+
+And after checking the email I got password to this level.
+
+![alt text](../Images/password_level5.png)
