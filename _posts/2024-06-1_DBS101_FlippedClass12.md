@@ -100,6 +100,6 @@ A simple explanation:
 
 * Commit Operation: Once the transaction completes all its operations and decides to commit, only then are the changes written to the actual database. This ensures that no partial changes are applied if something goes wrong before the commit.
 
-* Rollback Operation: If the transaction decides to roll back or if something goes wrong before committing, the changes are simply discarded. Since the database was never modified, there’s no need to undo anything.
+* Rollback Operation: If the transaction decides to roll back or if something goes wrong before committing, the changes are simply discarded. Since the database was never modified, there’s no need to undo anything
 
 
