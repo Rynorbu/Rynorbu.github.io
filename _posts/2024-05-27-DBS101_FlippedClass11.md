@@ -5,6 +5,8 @@ tags: [DBS101]
 ---
 ## Topic: Lock & Laches
 
+![alt text](../flip12/hello.gif)
+
 ## Concurrency Control in Database Systems
 
 Concurrency control is a technique used to maintain the integrity and performance of database systems when multiple transactions are accessing and modifying data. Even when multiple transactions execute concurrently, it ensures that the database remains in a consistent state.
